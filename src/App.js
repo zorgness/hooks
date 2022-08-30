@@ -7,6 +7,11 @@ import { UserContext, ColorContext } from './component/MyContext';
 import Profile from './component/Profile';
 import Counter from './component/Counter';
 import Progression from './component/Progression';
+import ProfileContainer from './component/ProfileContainer';
+import Input from './component/Input';
+import Title from './component/Title';
+import Input2 from './component/Input2';
+
 
 class App extends Component {
 
@@ -60,12 +65,17 @@ class App extends Component {
 
       <Progression />
 
+      <hr />
 
+      <ProfileContainer />
 
+      <hr />
+      <Title />
+      <Input />
 
+      <hr />
 
-
-
+      <Input2 />
 
     </div>
   )}
