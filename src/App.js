@@ -5,6 +5,8 @@ import FunctionCount from './component/FunctionCount';
 import Container from './component/Container';
 import { UserContext, ColorContext } from './component/MyContext';
 import Profile from './component/Profile';
+import Counter from './component/Counter';
+import Progression from './component/Progression';
 
 class App extends Component {
 
@@ -13,7 +15,17 @@ class App extends Component {
       name: "lisa",
       age: 8
     },
-    colorUser: 'red'
+    colorUser: 'red',
+    countOne: {
+      value: 0,
+      increment: 25,
+      color: "success"
+    },
+    countTwo: {
+      value: 0,
+      increment: 25,
+      color: "danger"
+    },
   }
 
   render () {
@@ -39,6 +51,17 @@ class App extends Component {
           <Profile />
         </ColorContext.Provider>
       </UserContext.Provider>
+
+      <hr />
+
+      <Counter />
+
+      <hr />
+
+      <Progression />
+
+
+
 
 
 
