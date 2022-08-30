@@ -7,6 +7,7 @@ import { UserContext, ColorContext } from './component/MyContext';
 import Profile from './component/Profile';
 import Counter from './component/Counter';
 import Progression from './component/Progression';
+import ProfileContainer from './component/ProfileContainer';
 
 class App extends Component {
 
@@ -59,6 +60,10 @@ class App extends Component {
       <hr />
 
       <Progression />
+
+      <hr />
+
+      <ProfileContainer />
 
 
 
