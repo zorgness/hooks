@@ -11,6 +11,9 @@ import ProfileContainer from './component/ProfileContainer';
 import Input from './component/Input';
 import Title from './component/Title';
 import Input2 from './component/Input2';
+import FancyContainer from './component/FancyContainer';
+import Layout from './component/Layout';
+import Box from './component/Box';
 
 
 class App extends Component {
@@ -76,6 +79,18 @@ class App extends Component {
       <hr />
 
       <Input2 />
+
+      <hr />
+
+      <FancyContainer />
+
+      <hr />
+
+      <h1>useLayoutEffect</h1>
+
+      <Layout />
+
+      <Box />
 
     </div>
   )}
