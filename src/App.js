@@ -14,7 +14,8 @@ import Input2 from './component/Input2';
 import FancyContainer from './component/FancyContainer';
 import Layout from './component/Layout';
 import Box from './component/Box';
-
+import SayHello from './component/SayHello';
+import MyContact from './component/MyContact';
 
 class App extends Component {
 
@@ -40,6 +41,14 @@ class App extends Component {
 
   return (
     <div className="App">
+
+
+
+        <MyContact />
+
+        <SayHello />
+
+        <hr />
 
 
 
@@ -93,6 +102,8 @@ class App extends Component {
       <hr />
 
       <FancyContainer />
+
+
 
 
 
