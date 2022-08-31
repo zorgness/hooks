@@ -41,6 +41,16 @@ class App extends Component {
   return (
     <div className="App">
 
+
+
+      <h1>useLayoutEffect</h1>
+
+      <Layout />
+
+      <Box />
+
+      <hr />
+
       <Todo />
 
       <hr/>
@@ -84,13 +94,7 @@ class App extends Component {
 
       <FancyContainer />
 
-      <hr />
 
-      <h1>useLayoutEffect</h1>
-
-      <Layout />
-
-      <Box />
 
     </div>
   )}

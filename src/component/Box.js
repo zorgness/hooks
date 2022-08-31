@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useLayoutEffect} from 'react';
 import Content from '../component/Content'
 
 const Box = () => {
@@ -8,7 +8,7 @@ const Box = () => {
   const boxRef = useRef(null)
 
 
-  useEffect(() => {
+  useLayoutEffect(() => {
 
     // if(boxRef.current.getBoundingClientRect().height) {
     //   console.log(boxRef.current.getBoundingClientRect().height);
@@ -26,8 +26,9 @@ const Box = () => {
     width: '400px',
     height: `${height}px`,
     margin: '20px auto',
-    backgroundColor: height > 100 ? 'red' : 'green',
+    backgroundColor: height < 120 ? 'red' : 'green',
   }
+
   return (
     <div ref={boxRef} style={boxStyle}>
       <Content />
