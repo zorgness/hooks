@@ -1,9 +1,14 @@
-import React, {useState, useEffect, Fragment} from 'react'
+import React, {useState, useEffect, lazy, Fragment, Suspense} from 'react'
+import {ErrorBoundary} from 'react-error-boundary'
 import Search from './Search'
+import ErrorFallback from './ErrorFallback';
 import useUpdateTitle from '../hooks/useUpdateTitle';
 import useFetch from '../hooks/useFetch';
 import Spinner from 'react-bootstrap/Spinner';
-import TableUsers from './TableUsers';
+// import TableUsers from './TableUsers';
+
+const TableUsers = lazy(() => import('./TableUsers'))
+
 
 const MyContact = () => {
 
@@ -93,7 +98,15 @@ const MyContact = () => {
 
             messageDisplay('no results found', 'red', 'danger') :
 
-            search === '' ? null :<TableUsers dataArray={result} />
+            search === '' ? null :
+
+            <ErrorBoundary FallbackComponent={ErrorFallback}>
+              <Suspense fallback={<div>Loading...</div>}>
+                <TableUsers dataArray={result} />
+              </Suspense>
+            </ErrorBoundary>
+
+
         }
 
 
