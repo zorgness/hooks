@@ -22,7 +22,7 @@ const useFetch = (url) => {
         }
 
         const fetchedData = await response.json();
-        console.log(fetchedData);
+
         setData(fetchedData);
         setInterval(() => {
               setIsLoading(false);

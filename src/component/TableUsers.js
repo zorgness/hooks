@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useDeferredValue} from 'react'
 import '../styles/TableUser.css'
 
 const TableUsers = ({dataArray}) => {
+
+  const deferedValue = useDeferredValue(dataArray);
+
   return (
     <table id="table">
       <thead>
@@ -14,8 +17,10 @@ const TableUsers = ({dataArray}) => {
       </thead>
 
       <tbody>
+
+
         {
-          dataArray.map(({id, name, username, email, address,}) => {
+          deferedValue.map(({id, name, username, email, address,}) => {
             return (
               <tr key={id}>
 
