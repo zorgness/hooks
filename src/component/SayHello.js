@@ -8,7 +8,7 @@ const SayHello = () => {
 
   return (
     <div className='m-3'>
-      <button onClick={() => setText('Hello World')}>SayHello</button>
+      <button onClick={() => setText('Hello World')}>Say Hello in Document Title</button>
     </div>
   )
 }

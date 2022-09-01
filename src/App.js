@@ -16,6 +16,7 @@ import Layout from './component/Layout';
 import Box from './component/Box';
 import SayHello from './component/SayHello';
 import MyContact from './component/MyContact';
+import FakeUserContainer from './component/FakeUserContainer';
 
 class App extends Component {
 
@@ -45,6 +46,8 @@ class App extends Component {
 
 
         <MyContact />
+
+        <hr />
 
         <SayHello />
 
@@ -102,6 +105,10 @@ class App extends Component {
       <hr />
 
       <FancyContainer />
+
+      <hr />
+
+      <FakeUserContainer />
 
 
 
